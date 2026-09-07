@@ -17,7 +17,7 @@ reopen the panel, it returns to the same site.
 1. Open `chrome://extensions` (or `edge://extensions`, `brave://extensions`).
 2. Enable **Developer mode** (top-right corner).
 3. Click **Load unpacked**.
-4. Select this folder: `/Users/cristian/Projects26/extension_web`.
+4. Select this folder: `/your/path/to/extension_web`.
 5. (Optional) Pin the extension to the toolbar by clicking the puzzle icon → pin.
 
 ## Usage
