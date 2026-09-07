@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Panel</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <select id="site-select" title="Choose a site"></select>
+      <button id="add-btn" class="icon-btn" title="Add a new URL">+</button>
+      <button id="reload-btn" class="icon-btn" title="Reload the page">r</button>
+      <button id="remove-btn" class="icon-btn" title="Remove the selected URL">&times;</button>
+    </header>
+
+    <main class="viewer">
+      <iframe
+        id="frame"
+        referrerpolicy="no-referrer"
+        allow="clipboard-read; clipboard-write; fullscreen; camera; microphone; geolocation"
+      ></iframe>
+      <div id="empty-state" class="empty-state">
+        <p>No site selected.</p>
+        <p>Use <strong>+</strong> to add a URL.</p>
+      </div>
+    </main>
+
+    <div id="modal" class="modal" hidden>
+      <form id="site-form" class="modal-card">
+        <h2>New URL</h2>
+        <label for="name-input">Name</label>
+        <input id="name-input" type="text" placeholder="e.g. Documentation" required />
+        <label for="url-input">URL</label>
+        <input id="url-input" type="text" placeholder="https://example.com" required />
+        <p id="form-error" class="form-error" hidden></p>
+        <div class="modal-actions">
+          <button type="button" id="cancel-btn" class="btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
